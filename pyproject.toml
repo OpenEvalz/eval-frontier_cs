@@ -1,0 +1,16 @@
+[project]
+name = "openevalz-eval-frontier-cs"
+version = "0.1.0"
+description = "OpenEvalz packaging of Frontier-CS: Benchmarking LLMs on Computer Science Problems"
+license = { text = "BUSL-1.1" }
+requires-python = ">=3.10"
+dependencies = [
+  "inspect-ai==0.3.260",
+  "trusted-router>=0.7.0",
+  "pyyaml>=6",
+]
+
+[tool.openevalz]
+eval = "frontier_cs"
+execution_class = "sandbox-local"
+cost_class = "high"

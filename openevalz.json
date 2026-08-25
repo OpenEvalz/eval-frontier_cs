@@ -1,0 +1,73 @@
+{
+  "openevalz_version": 1,
+  "eval": {
+    "id": "frontier_cs",
+    "slug": "frontier-cs",
+    "title": "Frontier-CS: Benchmarking LLMs on Computer Science Problems",
+    "group": "Coding",
+    "tags": [
+      "Agent"
+    ],
+    "source": "core"
+  },
+  "upstream": {
+    "repo": "https://github.com/UKGovernmentBEIS/inspect_evals",
+    "path": "src/inspect_evals/frontier_cs",
+    "inspect_ai": "0.3.260",
+    "eval_version": "2-A",
+    "dependency": ""
+  },
+  "execution": {
+    "class": "sandbox-local",
+    "cost_class": "high",
+    "sandbox": [
+      "solver",
+      "scorer"
+    ],
+    "requires_internet": false,
+    "fast": false,
+    "supports_k8s": false,
+    "environment": ""
+  },
+  "tasks": [
+    {
+      "name": "frontier_cs",
+      "samples": 238
+    },
+    {
+      "name": "frontier_cs_algorithmic",
+      "samples": 172
+    },
+    {
+      "name": "frontier_cs_research",
+      "samples": 66
+    }
+  ],
+  "total_samples": 476,
+  "external_assets": [
+    {
+      "type": "direct_url",
+      "source": "https://github.com/FrontierCS/Frontier-CS/archive/{SHA}.tar.gz",
+      "state": "pinned"
+    },
+    {
+      "type": "direct_url",
+      "source": "https://raw.githubusercontent.com/MikeMirzayanov/testlib/{SHA}/testlib.h",
+      "state": "pinned"
+    },
+    {
+      "type": "direct_url",
+      "source": "https://julialang-s3.julialang.org/bin/linux/x64/1.11/julia-1.11.3-linux-x86_64.tar.gz",
+      "state": "pinned"
+    },
+    {
+      "type": "huggingface",
+      "source": "FrontierCS/Frontier-CS",
+      "state": "pinned"
+    }
+  ],
+  "scaffolds": [
+    "baseline"
+  ],
+  "generated": "2026-08-25"
+}
